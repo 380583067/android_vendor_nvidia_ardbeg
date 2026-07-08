@@ -17,6 +17,10 @@
 # Blob
 # Copyright (C) 2014 The CyanogenMod Project
 PRODUCT_COPY_FILES += \
+    vendor/nvidia/ardbeg/proprietary/bin/input_cfboost_init.sh:system/bin/input_cfboost_init.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/set_hwui_params.sh:system/bin/set_hwui_params.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/set_light_sensor_perm.sh:system/bin/set_light_sensor_perm.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/ussr_setup.sh:system/bin/ussr_setup.sh \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_04_00_20.so:system/lib/para_10_04_00_20.so \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_08_00_b0.so:system/lib/para_10_08_00_b0.so \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_02_00_b0.so:system/lib/para_10_02_00_b0.so \
@@ -64,6 +68,8 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/lib/libsensors.nvs_input.so:system/lib/libsensors.nvs_input.so \
     vendor/nvidia/ardbeg/proprietary/lib/libsensors.mpl.so:system/lib/libsensors.mpl.so \
     vendor/nvidia/ardbeg/proprietary/lib/libsensors_external.so:system/lib/libsensors_external.so \
+    vendor/nvidia/ardbeg/proprietary/lib/libtbb.so:system/lib/libtbb.so \
+    vendor/nvidia/ardbeg/proprietary/lib/libbt-hci.so:system/lib/libbt-hci.so \
     vendor/nvidia/ardbeg/proprietary/lib/libinvensense_hal.so:system/lib/libinvensense_hal.so \
     vendor/nvidia/ardbeg/proprietary/lib/libmplmpu.so:system/lib/libmplmpu.so \
     vendor/nvidia/ardbeg/proprietary/lib/libmllite.so:system/lib/libmllite.so \
@@ -88,6 +94,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/lib/libGLESv2.so:system/lib/libGLESv2.so \
     vendor/nvidia/ardbeg/proprietary/lib/libGLESv1_CM.so:system/lib/libGLESv1_CM.so \
     vendor/nvidia/ardbeg/proprietary/lib/libEGL.so:system/lib/libEGL.so \
+    vendor/nvidia/ardbeg/proprietary/lib/hw/keystore.tegra.so:system/lib/hw/keystore.tegra.so \
     vendor/nvidia/ardbeg/proprietary/lib/hw/lights.tegra.so:system/lib/hw/lights.tegra.so \
     vendor/nvidia/ardbeg/proprietary/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
     vendor/nvidia/ardbeg/proprietary/lib/hw/ts.default.so:system/lib/hw/ts.default.so \
@@ -170,6 +177,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/nvavp_os_eff00000.bin:system/etc/firmware/nvavp_os_eff00000.bin \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/bcm4354a1.hcd:system/etc/firmware/bcm4354a1.hcd \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/nvavp_os_8ff00000.bin:system/etc/firmware/nvavp_os_8ff00000.bin \
+    vendor/nvidia/ardbeg/proprietary/etc/firmware/tegra_xusb_firmware:system/etc/firmware/tegra_xusb_firmware \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/tegra12x/gpccs.bin:system/etc/firmware/tegra12x/gpccs.bin \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/tegra12x/nvhost_msenc031.fw:system/etc/firmware/tegra12x/nvhost_msenc031.fw \
     vendor/nvidia/ardbeg/proprietary/etc/firmware/tegra12x/fecs.bin:system/etc/firmware/tegra12x/fecs.bin \
