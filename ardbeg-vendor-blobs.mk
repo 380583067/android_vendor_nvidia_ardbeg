@@ -17,10 +17,25 @@
 # Blob
 # Copyright (C) 2014 The CyanogenMod Project
 PRODUCT_COPY_FILES += \
+    vendor/nvidia/ardbeg/proprietary/bin/asan/app_process:system/bin/asan/app_process \
+    vendor/nvidia/ardbeg/proprietary/bin/applypatch_static:system/bin/applypatch_static \
+    vendor/nvidia/ardbeg/proprietary/bin/asanwrapper:system/bin/asanwrapper \
+    vendor/nvidia/ardbeg/proprietary/bin/mac:system/bin/mac \
+    vendor/nvidia/ardbeg/proprietary/bin/mcid:system/bin/mcid \
     vendor/nvidia/ardbeg/proprietary/bin/input_cfboost_init.sh:system/bin/input_cfboost_init.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/init_lbh.sh:system/bin/init_lbh.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/gps_select.sh:system/bin/gps_select.sh \
     vendor/nvidia/ardbeg/proprietary/bin/set_hwui_params.sh:system/bin/set_hwui_params.sh \
     vendor/nvidia/ardbeg/proprietary/bin/set_light_sensor_perm.sh:system/bin/set_light_sensor_perm.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/audioloop:system/bin/audioloop \
+    vendor/nvidia/ardbeg/proprietary/bin/mtk_agpsd:system/bin/mtk_agpsd \
+    vendor/nvidia/ardbeg/proprietary/bin/perf:system/bin/perf \
+    vendor/nvidia/ardbeg/proprietary/bin/python:system/bin/python \
+    vendor/nvidia/ardbeg/proprietary/bin/smbd:system/bin/smbd \
+    vendor/nvidia/ardbeg/proprietary/bin/stagefright:system/bin/stagefright \
     vendor/nvidia/ardbeg/proprietary/bin/ussr_setup.sh:system/bin/ussr_setup.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/wifi_loader.sh:system/bin/wifi_loader.sh \
+    vendor/nvidia/ardbeg/proprietary/bin/wpa_supplicant.sh:system/bin/wpa_supplicant.sh \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_04_00_20.so:system/lib/para_10_04_00_20.so \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_08_00_b0.so:system/lib/para_10_08_00_b0.so \
     vendor/nvidia/ardbeg/proprietary/lib/para_10_02_00_b0.so:system/lib/para_10_02_00_b0.so \
@@ -77,6 +92,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/lib/libnvoice.so:system/lib/libnvoice.so \
     vendor/nvidia/ardbeg/proprietary/lib/libopencv.so:system/lib/libopencv.so \
     vendor/nvidia/ardbeg/proprietary/lib/libopencv24_tegra.so:system/lib/libopencv24_tegra.so \
+    vendor/nvidia/ardbeg/proprietary/lib/libpowerservice_client.so:system/lib/libpowerservice_client.so \
     vendor/nvidia/ardbeg/proprietary/lib/libshape_detector.so:system/lib/libshape_detector.so \
     vendor/nvidia/ardbeg/proprietary/lib/libwlbwservice.so:system/lib/libwlbwservice.so \
     vendor/nvidia/ardbeg/proprietary/lib/libwlbwjni.so:system/lib/libwlbwjni.so \
@@ -148,6 +164,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/usr/keylayout/Vendor_2717_Product_3200.kl:system/usr/keylayout/Vendor_2717_Product_3200.kl \
     vendor/nvidia/ardbeg/proprietary/usr/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
     vendor/nvidia/ardbeg/proprietary/etc/nvram_4354a1.txt:system/etc/nvram_4354a1.txt \
+    vendor/nvidia/ardbeg/proprietary/etc/config.txt:system/etc/config.txt \
     vendor/nvidia/ardbeg/proprietary/etc/nvram_rev4.txt:system/etc/nvram_rev4.txt \
     vendor/nvidia/ardbeg/proprietary/etc/nvram_4335.txt:system/etc/nvram_4335.txt \
     vendor/nvidia/ardbeg/proprietary/etc/nvram_43241.txt:system/etc/nvram_43241.txt \
@@ -191,6 +208,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libardrv_dynamic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libardrv_dynamic.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libfcamdng.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfcamdng.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvglsi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvglsi.so \
+    vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvcap_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcap_video.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvodm_query.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvodm_query.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvddk_2d_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvddk_2d_v2.so \
@@ -251,6 +269,7 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libphs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libphs.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvmm_camera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvmm_camera.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libwfd_sink.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwfd_sink.so \
+    vendor/nvidia/ardbeg/proprietary/vendor/lib/libwvm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvm.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvstitching.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvstitching.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvddk_2d.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvddk_2d.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvmm_writer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvmm_writer.so \
@@ -278,12 +297,13 @@ PRODUCT_COPY_FILES += \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libGLESv2_tegra_impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libGLESv2_tegra_impl.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvcms.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcms.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvrm_graphics.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvrm_graphics.so \
+    vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvRSDriver.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libpowerservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpowerservice.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/libnvmm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvmm_parser.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/hw/hwcomposer.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.tegra.so \
-    vendor/nvidia/ardbeg/proprietary/vendor/lib/hw/power.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/power.tegra.so \
     vendor/nvidia/ardbeg/proprietary/vendor/lib/hw/gralloc.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.tegra.so \
     vendor/nvidia/ardbeg/proprietary/vendor/firmware/touch_fusion.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/touch_fusion.cfg \
+    vendor/nvidia/ardbeg/proprietary/vendor/firmware/maxim_fp35.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/maxim_fp35.bin \
     vendor/nvidia/ardbeg/proprietary/vendor/firmware/bcm43341/fw_bcmdhd_a0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341/fw_bcmdhd_a0.bin \
     vendor/nvidia/ardbeg/proprietary/vendor/firmware/bcm43341/fw_bcmdhd.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341/fw_bcmdhd.bin \
     vendor/nvidia/ardbeg/proprietary/vendor/firmware/bcm4350/fw_bcmdhd.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4350/fw_bcmdhd.bin \
