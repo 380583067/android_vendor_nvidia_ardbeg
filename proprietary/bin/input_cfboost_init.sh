@@ -13,32 +13,30 @@
 # This script reads max cpu lp frequency and programs it as default
 # boost frequency for input cfboost kernel module. In case max lp
 # frequency can't be read using sysfs some sane value is set. Default
-# boost time is set to 50ms and 1 minimum online CPUs.
+# boost time is set to 160ms with 2 minimum online CPUs.
 #
-# Defaults can be override by passing -f, -t and -n options.
+# Defaults can be override by passing -f, -t, -e and -n options.
 # cfboost: CPU Frequency Booster
 
-READ_MAXLP_FREQ="/sys/devices/system/cpu/cpuquiet/tegra_cpuquiet/idle_top_freq"
-WRITE_BOOST_FREQ="/sys/module/input_cfboost/parameters/boost_freq"
+WRITE_CPU_BOOST_FREQ="/sys/module/input_cfboost/parameters/boost_freq"
+WRITE_EMC_BOOST_FREQ="/sys/module/input_cfboost/parameters/boost_emc"
 WRITE_BOOST_TIME="/sys/module/input_cfboost/parameters/boost_time"
 WRITE_BOOST_CPUS="/sys/module/input_cfboost/parameters/boost_cpus"
 
 # defaults
-FREQ_KHZ=600000
-TIME_MS=50
-NUM_CPUS=1
-
-# try to read max cpu lp frequency from sysfs
-if [ -f $READ_MAXLP_FREQ ];
-then
-    FREQ_KHZ=`cat $READ_MAXLP_FREQ`
-fi
+CPU_FREQ_KHZ=600000
+EMC_FREQ_KHZ=300000
+TIME_MS=160
+NUM_CPUS=2
 
 # scan override options
-while getopts f:t:n: OPT; do
+while getopts f:t:n:e: OPT; do
     case "$OPT" in
         f)
-            FREQ_KHZ=$OPTARG
+            CPU_FREQ_KHZ=$OPTARG
+            ;;
+        e)
+            EMC_FREQ_KHZ=$OPTARG
             ;;
         t)
             TIME_MS=$OPTARG
@@ -49,9 +47,14 @@ while getopts f:t:n: OPT; do
     esac
 done
 
-if [ -f $WRITE_BOOST_FREQ ];
+if [ -f $WRITE_CPU_BOOST_FREQ ];
 then
-    echo $FREQ_KHZ > $WRITE_BOOST_FREQ
+    echo $CPU_FREQ_KHZ > $WRITE_CPU_BOOST_FREQ
+fi
+
+if [ -f $WRITE_EMC_BOOST_FREQ ];
+then
+    echo $EMC_FREQ_KHZ > $WRITE_EMC_BOOST_FREQ
 fi
 
 if [ -f $WRITE_BOOST_TIME ];

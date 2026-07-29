@@ -1,0 +1,2 @@
+kso_enable=0
+nv_by_chip=2 0x4354 1 nvram_4354a1.txt 0x4324 5 nvram_43241.txt
